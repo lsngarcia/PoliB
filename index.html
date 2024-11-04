@@ -20,12 +20,12 @@
                 <nav class="flex">
                     <ul>                        
                         <li><a class="header-botao" href="#home">Home</a></li>
-                        <li><a class="header-botao" href="#services">Portifolio</a></li>
+                        <li><a class="header-botao" href="#services"+window.scrollY > Portifolio</a></li>
                         <li><a class="header-botao" href="#about">Quem Somos</a></li>
                         <li><a class="header-botao" href="#showcase">Nossos Clientes</a></li>
                         <li><a class="header-botao" href="#contact">Contatos</a></li>
                     </ul>
-                </nav>  
+                </nav>
             </div>
     </header>
 
@@ -33,9 +33,9 @@
         <div class="wrapper">
             <a href="https://www.instagram.com/" target="_blank" class="button">
                 <div class="icon">
-                   <i class="fab fa-facebook-f"></i>
+                   <i class="fab fa-linkedin"></i>
                 </div>
-                <span>Facebook</span>
+                <span>Linkedin</span>
              </a>
              <a href="https://www.instagram.com/" target="_blank" class="button">
                 <div class="icon">
@@ -57,7 +57,7 @@
         <div class="home-info">
         <h1>Fale conosco e obtenha a sua abelha</h1>
         <p> Importância e composição química do mel e Descubra os Segredos do mel</p>
-        <a href="https://www.instagram.com/" target="_blank"><button class="button-home">Fale Conosco</button></a>
+        <a href="https://www.instagram.com/" target="_blank"><button class="button-home">Fale Conosco <i class="fab fa-whatsapp"></i></button></a>
         </div>
         <div class="home-img">
             <img src="img/people.webp" alt="">
@@ -143,16 +143,33 @@
     <footer id="contact" >
         <div class="footer">
             <div class="footer-social">
-            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/"></a><i class="fab fa-instagram"></i></a>
-            <a href="https://www.instagram.com/"></a><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><button class="botao-icone"><i class="fab fa-twitter"></i></button></a>
+            <a href="https://www.instagram.com/" target="_blank"><button class="botao-icone"><i class="fab fa-tiktok"></i></button></a>
+            <a href="https://www.instagram.com/" target="_blank"><button class="botao-icone"><i class="fab fa-instagram"></i></button></a>
             </div>
-            <p>Americana - Sao paulo</p>
-            <div class="footer-endereco">
+            <div class="footer-informacoes">
+            <a href="#" class="icone-footer">Icon</a>
+            <div class="footer-telefone">
                 <p>Telefone: (19) 99999 - 9999</p>
-                <p>contato@polib.com.br</p>
-            </div>
+                <p>Segunda a Sexta-feira</p>
+                <p>9h às 18h</p>
+                <a><button class="botao-footer">Fale conosco <i class="fab fa-whatsapp"></i></button></a>
+                </div>
+                <div>
+            <p>Americana - Sao paulo</p>
+            <p>contato@polib.com.br</p>
+        </div>
+    </div>
+        </div>
+        <div class="footer-direitos">
+            <p>© 2024 Lucas, todos os direitos reservados</p>
         </div>
     </footer>
 </body>
+<script>
+    window.addEventListener("scroll",function(){
+        let header =document.querySelector('#header')
+        header.classList.toggle('rolagem',window.scrollY > 200)
+    })
+  </script>
 </html>

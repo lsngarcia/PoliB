@@ -23,8 +23,15 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0.0);
     z-index: 5;
+    transition: 0.4s;
+}
+
+header.rolagem{
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: 0.7s;
 }
 
 .container{
@@ -50,6 +57,11 @@ header ul li a{
     font-weight: 700;
 }
 
+header ul li a:hover{
+    color: #dc2b7b;
+    transition: 0.4;
+}
+
 .social-midia{
     position: fixed;
     top: 40%;
@@ -61,7 +73,7 @@ header ul li a{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 230px;
+    height: 180px;
 }
 
 .button {
@@ -126,8 +138,7 @@ header ul li a{
   }
 
 .home{
-    background-color: white;
-    height: 100vh;
+    height: 100vh;  
     display: flex;
     justify-content: center;
     align-items: center;
@@ -181,12 +192,13 @@ header ul li a{
 .service{
     background-color:#f1e8dc;
     position: relative;
+    box-shadow: inset 0px -10px 10px rgba(0, 0, 0, 0.2);
 }
 
 .servico-titulo{
     justify-content: space-between;
     display: flex;
-    padding: 7% 18% 3%;
+    padding: 10% 18% 3%;
     font-size: 40px;
     color: #a40c50;
 }
@@ -227,6 +239,7 @@ header ul li a{
 
 .sobre-titulo{
 font-size: 60px;
+padding-top: 7%;
 padding-bottom: 4%;
 color: white;
 }
@@ -287,6 +300,7 @@ color: white;
 
 .cliente-sessao{
     padding: 0 5% 5%;
+    box-shadow: inset 0px -10px 10px rgba(0, 0, 0, 0.2);
     
 }
 
@@ -301,31 +315,96 @@ color: white;
 
 .footer{
     display: flex;
-    height: 50vh;
+    height: 60vh;
     background-color: #a40c50;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    font-size: 20px;
+    font-size: 18px;
     color: white;
     position: relative;
 }
 
 .footer-social {
     display: flex;
+    width: 15%;
+    justify-content: space-between;
+    margin-bottom: 3%;
+}
+
+.botao-icone{
+    background-color: #a40c50;
+    border: 2px solid;
+    border-color: white;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    
 }
 
 .footer-social i{
-    font-size: 40px;
-    padding: 50px 50px;
+    font-size: 30px;
     color: white;
 }
 
-.footer-endereco {
-    display: flex;
+.botao-icone:hover{
+    background-color: white;
+    border-color: white;
+    transition: 0.3s;
 }
 
-.footer-endereco p{
-    padding: 50px;
+.footer-social i:hover{
+    color: #a40c50;
+    transition: 0.3s;
+}
 
+.icone-footer{
+    position: absolute;
+    left: 7%;
+}
+
+.footer-informacoes{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-informacoes p{
+    padding: 7px;
+}
+
+.botao-footer{
+    height: 45px;
+    width: 150px;
+    background-color: #a40c50;
+    border: 2px solid;
+    border-color: white;
+    border-radius: 20px;
+    color: white;
+    margin-top: 7px;
+    font-size: 15px;
+}
+
+.botao-footer:hover{
+    background-color: white;
+    color: #a40c50;
+    border-color: white;
+    transition: .2s;
+}
+
+.footer-telefone {
+    display: flex;
+    flex-direction: column;
+    padding-right: 16%;
+}
+
+.footer-direitos{
+    background-color: #3c3c3c;
+    color: white;
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    align-items: center;
+    position: relative;
 }
